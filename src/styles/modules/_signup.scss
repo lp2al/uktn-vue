@@ -1,0 +1,41 @@
+
+.signup {
+
+	padding:30px 20px;
+	border:1px solid $color-border;
+
+	&__header {
+		text-align:center;
+		//margin-bottom:20px;
+		font-weight:$font-weight--bold;
+	}
+
+	&__fields {
+		@include clearfix;
+		max-width:600px;
+		margin:0 auto;
+		// display:flex;
+		// flex-flow: row nowrap;
+		height:45px;
+	}
+
+	&__field {
+		float:left;
+		height:100%; width:74%;
+		padding:10px 20px;
+		font-size:14px;
+		background-color: $color-background--mild;
+		border-color: $color-background--mild;
+	
+
+		// flex:1 0 auto;
+	}
+
+	&__submit {
+		float:right;
+		position:relative;
+		padding:10px 20px;
+		width:25%; height:100%;
+	}
+	
+}

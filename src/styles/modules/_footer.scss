@@ -1,0 +1,63 @@
+.footer {
+	padding:40px 0;
+	background-color:$color-background--soft;
+	letter-spacing:1px;
+	font-size:11px;
+	font-weight: $font-weight--bold;
+	color: $color-copy--xsoft;
+	text-transform:uppercase;
+	position:absolute;
+	width:100%;
+	z-index:9999;
+	
+	&__sponsors {
+		max-width:800px;
+		margin:0 auto;
+		text-align:center;
+	
+		& > a {
+			padding:5px;
+			display:inline-block;
+			img { 
+				// filter: grayscale(100%); 
+				// opacity: 0.5;
+			}
+		}
+	}
+
+	&__nav {
+
+		margin-bottom:5px;
+
+		& > a {
+			display:inline-block;
+			color: $color-copy--xsoft;
+			padding:5px 10px;
+		}
+
+	}
+
+	&__smallprint {
+		font-size:11px;
+		color: $color-copy--xxsoft;
+	}
+}
+
+
+.sitemap {
+	
+	border-bottom:1px solid #ddd;
+	padding-bottom:30px;
+	margin-bottom:30px;
+
+	& a {
+	display:block;
+	color: $color-copy--xsoft;
+		&:hover {
+			color: $color-copy--dark;
+		}
+	}
+
+	
+}
+

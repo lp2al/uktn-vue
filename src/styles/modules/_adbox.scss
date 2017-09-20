@@ -1,0 +1,160 @@
+.adbox {
+	text-align: center;
+	opacity:1;
+	
+	img, a  {
+		display:block;
+		// margin:0 auto;
+	}
+
+	&--mpu {
+		transition: all 0.5s linear 0s;
+		max-height:600px;
+		max-width:300px;
+	}
+
+	&--mpu-article {
+		float:left;
+		margin-right:20px;
+	}
+
+	&--hp-dmpu, &--hp-mpu {
+		// transition: all 0.5s linear 0s;
+		max-height:600px;
+		max-width:300px;
+		margin:0 auto;
+		@include breakpoint($md) {
+			float:right;
+		}
+	}
+
+	&--takeover {
+		display:none;
+		max-height:1080px;
+		height:100%; width:100%;
+		position:absolute;
+		background-position: center top;
+    	background-repeat: no-repeat;
+		will-change: transform;
+    	@include breakpoint(1300px) {
+			display:block;
+		}
+
+		&.is-fixed {
+			position: fixed;
+			z-index:0;
+		}
+
+	}
+
+	&--ldr {
+		text-align:center;
+		background:$white;
+	
+		@include breakpoint($lg) {
+			border-top:1px solid $color-border;
+			border-bottom:1px solid $color-border;
+			background: repeating-linear-gradient(
+			    135deg,
+			    lighten(#eee, 5.5%),
+			    lighten(#eee, 5.5%) 5px,
+			    $white 5px,
+			    $white 10px
+			);
+			
+			//ad container
+			& > div {
+				margin:30px 0 !important;
+			}
+			
+		}
+	}
+	
+	//pre-content
+	&--head {
+
+		color: white;
+	  	background: repeating-linear-gradient(
+		    135deg,
+		    lighten(#eee, 5.5%),
+		    lighten(#eee, 5.5%) 5px,
+		    $white 5px,
+		    $white 10px
+		);
+
+		@include breakpoint($md) {
+			display:block;
+		}
+	}
+
+	&--foot {
+		border-top:1px solid $color-border;
+		padding:20px 0;
+		color: white;
+	  	background: repeating-linear-gradient(
+		    135deg,
+		    lighten(#ededed, 3%),
+		    lighten(#ededed, 3%) 10px,
+		    $white 10px,
+		    $white 20px
+		);
+
+		display:none;
+		@include breakpoint($md) {
+			display:block;
+		}
+	}
+
+	&.is-fixed {
+		@include breakpoint($sm) {
+			position:fixed;
+			transition: all 0s linear 0s;
+			opacity:1;
+			//will-change: transform;
+		}
+	}
+
+	&.is-hidden {
+		opacity:0;
+		max-height:0;
+	}
+
+}
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+// needs updating
+.modal__adbox {
+	box-sizing:border-box;
+	position:relative;
+  	margin: auto;
+  	background: #fff;
+  	border: 10px solid black;
+  	z-index: 9999; 
+  	max-width:520px;
+ }
+
+.modal__close {
+  	font-family: 'Arial';
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	background: black;
+  	color: white;
+  	padding: 0 0 10px 10px;
+  	cursor: pointer; 
+}
+
+

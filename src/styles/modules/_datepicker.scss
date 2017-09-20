@@ -1,0 +1,14 @@
+.ui-datepicker {
+	margin-top:-20px;
+} 
+
+.ui-datepicker select {
+	color: $color-copy--dark;
+	padding:0;
+}
+
+.ui-datepicker-header.ui-widget-header {
+	border-color: $color-primary;
+	background-color: $color-primary;
+	background-image:none;
+}

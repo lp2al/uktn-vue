@@ -1,0 +1,60 @@
+//when wallpaper ad is active, wallpaper class is added to body.
+
+.wallpaper .l-content-wrapper {
+	max-width:1283px;
+	margin:0 auto;
+	position:relative;
+	z-index:1;
+}
+
+.wallpaper .header {
+	position:relative;
+	max-width:1283px;
+	margin:0 auto;
+	z-index:9999;
+
+	&__sticky {
+		max-width:1283px;
+	}
+}
+
+.wallpaper .l-highlight {
+	@include breakpoint($sm) {
+		background-color: transparent;
+	}
+}
+
+.wallpaper .hero {
+
+	@include breakpoint(1300px) { max-width:1200px; }
+
+	& .hero__copy--overlay {
+		@include breakpoint($sm) { 
+			position:absolute;
+			left:30px; bottom:30px;
+			width:260px; height:230px;
+			@include gradient-1;
+		}
+		@include breakpoint($md) { 
+			position:static;
+			width:100%; height:auto;
+		}
+		@include breakpoint($xlg){
+			position:static;
+			width:100%; height:auto;
+		}
+	}
+
+	& .l-grid__box {
+		&--sm { @include breakpoint($xlg) { width: $sml-box-lg; } }
+		&--lg { @include breakpoint($xlg) { width: $lrg-box-lg } }
+		&--push-sm { @include breakpoint($xlg) { left:$sml-box-lg } }
+		&--pull-lg { @include breakpoint($xlg) { left: -$lrg-box-lg } }
+	}
+
+}
+
+.wallpaper .footer {
+
+}
+

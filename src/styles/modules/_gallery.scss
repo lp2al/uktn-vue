@@ -1,0 +1,23 @@
+.gallery {
+
+	@include clearfix;
+	width:80%;
+	margin:0 auto;
+	padding-top:20px;
+
+	@include breakpoint($sm) { width:65%; }
+
+	& .gallery-item {
+		float:left;
+		width:29.3333%;
+		border:1px solid $color-border;
+		text-align:center;
+		margin-bottom:4%;
+		margin-right:4%;
+		a { display:block;}
+		img {
+			display:inline-block;
+		}
+	}
+
+}

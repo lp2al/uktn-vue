@@ -1,0 +1,39 @@
+.subscribe {
+	
+	position:relative;
+
+	@include clearfix;
+	max-width:$md;
+	margin:0 auto;
+
+	&__thumb {
+		padding:0 20px;
+		img {margin:0 auto}
+		@include breakpoint($ms) {
+			width:50%;
+			float:left;
+			text-align:right;
+			img { float:right }
+		}
+	}
+
+	&__copy {
+		padding:0 20px;
+		text-align:center;
+		width:100%;
+		@include breakpoint($ms) {
+			width:50%;
+			float:left;
+			text-align:left;
+		}
+	}
+
+	&__title {
+		font-size:18px;
+		color: $color-copy--dark;
+		& > a {
+			color: $color-copy--dark;
+			&:hover { color: $color-primary; }
+		}
+	}
+}

@@ -1,0 +1,51 @@
+.l-content-wrapper {
+	position:relative;
+	padding:0;
+	overflow:hidden;
+
+	@include breakpoint($ms) { padding:0 5%; }
+	@include breakpoint($sm) { padding:0; }
+
+	&--page {
+		// padding:0 5%;
+		@include breakpoint($sm) { padding:0; }
+	}
+}
+
+.l-highlight {
+	@include breakpoint($sm) {
+		background-color:$color-background--soft;
+	}
+}
+
+
+.lede-list {
+	border:1px solid $color-border;
+	margin-bottom:6px;
+	display:flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	@include breakpoint($ms) { flex-flow: row nowrap; }
+
+	&__thumb {
+
+		display:block;
+		width:100%;
+		& > img { width:100%; }
+		@include breakpoint($ms) {
+			float:left;
+			width:33%;
+			flex: 1 1 auto;
+		}
+		@include breakpoint($sm) {  flex: 0 0 300px; }
+	}
+
+	&__copy {
+		padding:20px;
+		@include breakpoint($ms) {
+			float:left;
+			width: 67%;
+		}
+	}
+}
+

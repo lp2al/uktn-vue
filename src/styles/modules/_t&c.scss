@@ -1,0 +1,39 @@
+
+.tc {
+
+	text-align: justify;
+	font-size: 14px;
+
+	& ol { counter-reset: item; }
+	& > ol { padding-left: 22px; }
+	& > ol > li > span { 
+		font-size:18px;
+		display:block;
+		padding-bottom:10px;
+	}
+	& ol li {
+		display: block; 
+		position: relative; 
+		padding-bottom:10px; 
+	}
+
+	& ol li:before {
+		font-size:14px;
+		font-weight:normal;
+		content: counters(item, ".")"."; 
+		counter-increment: item; 
+	    position: absolute; 
+	    margin-right: 100%; 
+	    right: 10px; /* space between number and text */ 
+	}
+
+	& > ol > li:before { 
+		font-size:18px;
+		font-weight:700;
+	}
+
+}
+
+
+
+

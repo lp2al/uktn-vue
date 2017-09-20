@@ -1,0 +1,76 @@
+.frm_compact_text {
+	background-color: $color-background--soft;
+	padding:10px 20px;
+	display:inline-block;
+	border:1px solid #ddd;
+	cursor: pointer;
+}
+
+.frm_upload_text {
+	display:none;
+}
+
+.frm_small_text {
+
+	font-weight: $font-weight--thin;
+	font-style: italic;
+}
+
+.frm_description {
+	font-size:12px;
+	color: $color-copy--soft;
+	font-style: italic;
+}
+
+.frm_error {
+	color: red;
+}
+
+.frm_compact_text {
+	border:1px solid #ccc;
+	background: #ddd;
+	padding:5px 8px;
+	cursor:pointer;
+	display:inline-block;
+	margin-bottom:5px;
+	border-radius:2px;
+}
+
+.dz-error-mark, .dz-success-mark {
+	display:none;
+}
+
+.frm_error_style {
+	color:red;
+	display:block;
+	margin-bottom:5px;
+	font-size:16px;
+}
+
+
+#loginform {
+
+	& input[type="text"], & input[type="password"]  { 
+		background: $color-background--mild;
+		border:0;
+	}
+
+	& input[type="submit"] {
+		background: $color-primary;
+		color:$white;
+		padding:10px 30px 10px; //extra 4 pixels for bottom border overlay
+		display:inline-block;
+		position:relative;
+		background: $color-primary;
+		color: $white;
+		font-size: 16px;
+		font-weight: $font-weight--bold;
+		overflow:hidden;
+		outline:none;
+		z-index:1;
+		text-transform: uppercase;
+	}
+
+}
+
+

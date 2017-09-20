@@ -1,0 +1,68 @@
+
+@mixin copy-default {
+	position:static;
+	width:100%; height:auto;
+}
+
+@mixin copy-overlay {
+	position:absolute;
+	left:30px; bottom:30px;
+	width:260px; height:230px;
+	@include gradient-1;
+}
+
+.hero {
+	
+	&__thumb {
+		display:block;
+		position:relative;
+		& > img { width:100%; }
+	}
+
+	&__copy {
+		min-height:100px;
+		padding:10px 15px;
+		
+		display:flex;
+		flex-flow:row wrap;
+		align-content: center;
+
+		&--overlay {
+			@include breakpoint($sm)  { @include copy-overlay; }
+			@include breakpoint($md)  { @include copy-default; }
+			@include breakpoint($xlg)  { @include copy-overlay; }
+		}
+
+		&--overlay2 {
+			@include breakpoint($sm)  { @include copy-overlay; }
+		}
+
+	}
+
+	&__cta {
+		font-size:20px;
+		font-weight:300;
+	}
+
+	//when wallpaper ad is being served
+	&.is-narrow {
+		@include breakpoint(1300px) {
+			max-width:1200px;
+		}
+		
+		& .hero__copy {
+
+			&--overlay {
+				@include breakpoint($sm) { @include copy-overlay; }
+				@include breakpoint($md) { @include copy-default; }
+				@include breakpoint($xlg) { @include copy-default; }
+			}
+
+		}
+
+	}
+
+}
+
+
+

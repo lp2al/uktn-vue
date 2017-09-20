@@ -1,0 +1,214 @@
+//bootstrap modifications
+.container {
+
+	position:relative; //prevents wallpaper covering some elements.
+
+	&--edge { padding: 0; } //content to touch edge of screen. 
+
+	//these modifiers sets padding on the nested columns.
+
+	&--nopad {
+		//padding:0;
+		.row { margin:0; }
+		[class*="col-"] { padding:0; }
+	}
+
+	&--pad3 {
+		padding:0;
+		.row { 
+			margin-left:-3px; 
+			margin-right:-3px;
+		}
+		[class*="col-"] { padding:0 3px; }
+	}
+
+	&--pad5 {
+		padding:0;
+		.row { 
+			margin-left:-5px; 
+			margin-right:-5px;
+		}
+		[class*="col-"] { padding:0 5px; }
+	}
+
+	&--pad10 {
+		padding:0;
+		.row { 
+			margin-left:-10px;
+			margin-right:-10px;
+		}
+		[class*="col-"] { padding:0 10px }
+	}
+
+	&--pad15 {
+		//padding:0;
+		.row { 
+			margin-left:-15px;
+			margin-right:-15px;
+		}
+		[class*="col-"] { padding:0 15px }
+	}
+
+	&--pad20 {
+		//padding:0;
+		.row { 
+			margin-left:-20px;
+			margin-right:-20px
+		}
+		[class*="col-"] { padding:0 20px; }
+	}
+
+	&--pad30 {
+		//padding:0;
+		.row { 
+			margin-left:-30px;
+			margin-right:-30px;
+		}
+		[class*="col-"] { padding:0 30px; }
+	}
+
+
+	&--bordered {
+		
+		& > .row {
+			border-left:1px solid $color-border;
+			border-top:1px solid  $color-border;
+
+			& > [class^="col-"] { 
+				border-right:1px solid $color-border;
+				border-bottom:1px solid $color-border;
+			}
+		}
+	}
+
+	&--bordered-light {
+
+		& > .row {
+			border-left:1px solid $white;
+			border-top :1px solid $white;;
+
+			& > [class^="col-"] { 
+				border-right :1px solid $white;;
+				border-bottom:1px solid $white;;
+			}
+		}
+	}
+
+	&--highlight {
+		position:relative;
+		&:before {
+			position: absolute;
+			display:block;
+		    content: " ";
+		    width: 9999px;
+		    height: 100%;
+		    left: -1000px;
+		    top: 0px;
+		    background: #ededed;
+		    z-index: -2;
+		}
+	}
+}
+
+.row {
+
+	&--flex {
+		display:flex;
+		flex-flow: row wrap;
+		&:before, &:after {
+			content: normal;
+			//fix of for safari
+		}
+	}
+
+	&--highlight {
+		position:relative;
+		@include clearfix;
+
+		&:before {
+			position: absolute;
+			display:block;
+		    content: " ";
+		    width: 9999px;
+		    height: 100%;
+		    left: -1000px;
+		    top: 0px;
+		    background: #ededed;
+		    z-index: -2;
+		}
+	}
+
+	&--pad {
+		margin-left:-30px !important;
+		margin-right:-30px !important;
+
+		& > [class^="col-"] { 
+			padding:0 30px !important;
+		}
+	}
+
+	&--pad5 {
+		margin-left:-5px !important;
+		margin-right:-5px !important;
+
+		& > [class^="col-"] { 
+			padding:0 5px !important;
+		}
+	}
+
+	&--pad10 {
+		margin-left: -10px !important;
+		margin-right:-10px !important;
+
+		& > [class^="col-"] { 
+			padding:0 10px !important;
+		}
+	}
+
+	&--pad15 {
+		margin-left: -15px !important;
+		margin-right:-15px !important;
+
+		& > [class^="col-"] { 
+			padding:0 15px !important;
+		}
+	}
+
+	&--pad20 {
+		margin-left: -20px !important;
+		margin-right:-20px !important;
+
+		& > [class^="col-"] { 
+			padding:0 20px !important;
+		}
+	}
+
+	&--bordered {
+		border-left:1px solid $color-border;
+		border-top:1px solid  $color-border;
+		& > [class^="col-"] { 
+			border-right:1px solid $color-border;
+			border-bottom:1px solid $color-border;
+		}
+	}
+
+	&--bordered-light {
+		border-left:1px solid $white;
+		border-top:1px solid  $white;
+		& > [class^="col-"] { 
+			border-right:1px solid $white;
+			border-bottom:1px solid $white;
+		}
+	}
+}
+
+.js-equalise {
+	.row {
+		height:100%;
+		[class^="col-"] { 
+			height:100%;
+		}
+	}
+}
+
+

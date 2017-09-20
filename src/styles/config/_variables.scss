@@ -1,0 +1,79 @@
+//variables.scss
+//=================
+
+//Colors
+$bright-turquoise  : #04EAD0;
+$pomegranate       : #F53F1A;
+$bermuda           : #7ECCD6;
+$black             : #000000;
+$grey              : #999999;
+$white			   : #FFFFFF;
+
+$color-primary     : $bright-turquoise;
+$color-secondary   : $bermuda;
+
+$color-link        : $color-primary;
+$color-link--hover : $bright-turquoise;
+
+$color-border       : #eaeaea;
+$color-border--mild : #dfdfdf;
+$color-background--soft  : #ededed;
+$color-background--mild  : #dfdfdf;
+
+$color-copy--dark   : #333;
+$color-copy--mild   : #555;
+$color-copy--soft   : #777;
+$color-copy--xsoft  : #999;
+$color-copy--xxsoft : #CCC;
+
+//Font Weights
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 500;
+$font-weight--ultra-bold : 600;
+
+//Color Palette Modifiers
+$palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 33%),
+		light    : lighten($grey, 12%),
+		base     : $grey,
+		dark     : darken($grey, 8%),
+		x-dark   : darken($grey, 16%)
+	),
+	black: (
+		x-light  : lighten($black, 15%),
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	), 
+	turq: (
+		base     : $bright-turquoise,
+		dark     : darken($bright-turquoise, 8%),
+		x-dark   : darken($bright-turquoise, 13%)
+	)
+);
+
+//Text
+$base__font-size  : 16px;
+$base__line       : 24px;
+
+//Background & Borders
+$base__background-color : $white;
+$base__border-color     : #eee;
+
+
+// Breakpoints
+$ms  : 480px;
+$sm  : 768px;
+$md  : 992px;
+$lg  : 1200px;
+
+//Font variables
+// $opensans  : 'Open Sans', Helvetica, Arial, sans-serif;
+$roboto    : 'Roboto', sans-serif;
+
+$lede__font-color : #333; 
+

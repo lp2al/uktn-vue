@@ -1,0 +1,43 @@
+.c-form-lede {
+	position:relative;
+	display:inline-block;
+	background: #EAEAEA;
+
+	&--full { 
+		width:100%;
+		display:block;
+		.c-form-lede__input {
+			width:100%;
+		}
+	}
+}
+
+.c-form-lede__input { 
+	background:transparent;
+	border:none;
+	padding:7px;
+	
+	&--icon-left  { 
+		padding-left:35px; 
+	}
+}
+
+.c-form-lede__submit {
+	margin-left:-5px;
+}
+
+.c-form-lede__icon {
+	display:block;
+	position:absolute;
+	background:none;
+	border:none;
+	top:5px;
+
+	&--left { left:10px }
+	&--right { right:10px; }
+}
+
+
+
+
+

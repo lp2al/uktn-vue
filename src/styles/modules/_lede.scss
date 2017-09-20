@@ -1,0 +1,159 @@
+.lede  {
+
+	@include clearfix;
+	position:relative;
+	height:100%;
+	background-color: $white;
+
+	//modications
+	&--flex {
+		display:flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+	}
+
+	&--inline {
+		width: 100%;
+		border:1px solid $color-border;
+	}
+	
+	//states
+	&.has-hover {
+		transition: box-shadow 0.2s ease-in-out 0s;
+		&:hover { box-shadow: 0px 0px 15px 1px rgba(#DCDCDC,1); }
+	}
+	
+	//sub components
+	&__thumb {
+		display:block;
+		position:relative;
+
+		& > img { 
+			width:100%; 
+		}
+		
+		&--inline { 
+			float:left;
+			margin-right:20px;
+			flex: 0 0 auto;
+		}
+
+		//states
+		&.has-hover {
+
+			&:after {
+				transition: opacity 0.2s ease-in-out 0s;
+				position:absolute;
+				content:"";
+				width:100%; height:100%;
+				top:0; left:0;
+				background-color: rgba($color-primary, 0.8);
+				opacity:0;			
+			}
+
+			&:before {
+				transition: opacity 0.2s ease-in-out 0s;
+				height:20px;
+				text-align:center;
+				margin: auto;
+				position:absolute;
+				content:"Read More";
+				color: $white;
+				top: 0; left: 0; bottom: 0; right: 0;
+				z-index:1;
+				opacity:0;
+			}
+		
+			&:hover { &:after, &:before { opacity:1; } }
+		}
+
+		&--overlay:before {
+			position:absolute;
+			content:"";
+			left:0; top:0;
+			width:100%; height:100%;
+			background-color: rgba($black, 0.1)
+		}
+	}
+
+	&__copy {
+		
+		@include clearfix;
+		margin-top:-5px;
+		&--pad-xs {
+			padding:0 20px;
+			@include breakpoint($ms) {
+				padding:0;
+			}
+		}
+	}
+
+	&__excerpt {
+		position:relative;
+		display:block;
+		color:$color-copy--mild;
+		font-size:13px;
+		line-height:1.5;
+	}
+
+
+	&__meta {
+		line-height:1.5;
+		font-size:16px;
+		text-transform: none;
+	}
+
+	&__avatar {
+		float:left;
+		border-right:1px solid $color-border;
+		padding-right:10px;
+		margin-right:10px;
+
+		> span { 
+			display:block;
+			width:40px;
+			height:40px; 
+			border-radius: 50%; 
+			overflow:hidden;
+			
+		}
+	}
+
+	&__authorname {
+		display:block;
+		position:relative;
+		top:-3px;
+		a {
+			font-size:14px;
+		}
+	}
+
+
+	&__catdate {
+		display:inline-block;
+		position:relative;
+		top:-10px;
+	}
+
+	// &__share {
+	// 	position:absolute;
+	// 	left:0; top:0;
+	// 	width:100%; height:100%;
+	// 	padding-top:15px;
+	// 	font-size:22px;
+	// 	background:$white;
+	// 	transition: all 0.2s ease-in-out 0s;
+	// 	& > a { color: $color-primary; }
+	// 	&.is-hidden { opacity:0; }
+	// }
+
+
+	
+	// &__icon {
+	// 	font-size: 40px;
+	// 	color: $color-copy--xxsoft;
+	// }
+
+}
+
+

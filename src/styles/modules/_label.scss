@@ -1,0 +1,9 @@
+.label, .date {
+	display:inline-block;
+	width: auto;
+	font-size:9px;
+	letter-spacing:1px;
+	text-transform:uppercase;
+	color: $color-copy--soft;
+	&--white {  color: rgba($white, 0.9) }
+}

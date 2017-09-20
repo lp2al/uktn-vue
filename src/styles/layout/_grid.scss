@@ -1,0 +1,96 @@
+
+$xlg:         1518px;
+$gutter:      6px;
+
+$sml-box-xlg: ( (300px + $gutter) / $xlg ) * 100%; 
+$lrg-box-xlg: 100% - ($sml-box-xlg * 2);
+$sml-box-lg: ( (300px + $gutter) / $lg) * 100%; 
+$lrg-box-lg: 100% - ($sml-box-lg * 2);
+$sml-box-md: ( (300px + $gutter) / $md) * 100%; 
+$lrg-box-md: 100% - ($sml-box-md * 2);
+$sml-box-sm: ( (300px + $gutter) / $sm) * 100%; 
+$lrg-box-sm: 100% - ($sml-box-sm * 2);
+
+.l-grid {
+	margin:0 auto;
+	@include breakpoint($sm)  { width:$sm;  }
+	@include breakpoint($md)  { width:$md; height: 512px;  }
+	@include breakpoint($lg)  { width:$lg;  }
+
+	&--wide { @include breakpoint($xlg) { width:$xlg; } } 
+
+	&__row { 
+		@include clearfix;
+		// margin-left:  -$gutter/2; 
+		// margin-right: -$gutter/2
+		height:100%;
+	}
+
+	&__box {
+		position:relative;
+		float:left;
+		width:100%;
+		// margin: $gutter / 2;
+		border:3px solid #fff;
+		
+		&--sm { 
+			overflow:hidden;
+			@include breakpoint($ms)  { width: 50%; } 
+			@include breakpoint($sm)  { 
+				width: 33.33%;
+				&:last-child { display:none; }
+			} 
+			@include breakpoint($md)  { 
+				width: $sml-box-md;
+				&:last-child { display:block; }
+			} 
+			@include breakpoint($lg)  { width: $sml-box-lg; } 
+			@include breakpoint($xlg) { width: $sml-box-xlg; } 
+		}
+
+		&--lg { 
+		    height:100%;
+			@include breakpoint($md)  { width: $lrg-box-md } 
+			@include breakpoint($lg)  { width: $lrg-box-lg } 
+			@include breakpoint($xlg) { width: $lrg-box-xlg } 
+		}
+
+		&--push-sm { 
+			@include breakpoint($md)  { left:$sml-box-md } 
+			@include breakpoint($lg)  { left:$sml-box-lg } 
+			@include breakpoint($xlg) { left:$sml-box-xlg } 
+		}
+
+		&--pull-lg { 
+			@include breakpoint($md)  { left: -$lrg-box-md } 
+			@include breakpoint($lg)  { left: -$lrg-box-lg } 
+			@include breakpoint($xlg) { left: -$lrg-box-xlg } 
+		}
+
+		&__overlay {
+			@mixin copy-default {
+				position:static;
+				width:100%; height:auto;
+			}
+			@mixin copy-overlay {
+				position:absolute;
+				left:30px; bottom:30px;
+				width:260px; height:230px;
+				@include gradient-1;
+			}
+			@include breakpoint($sm)  { @include copy-overlay; }
+			@include breakpoint($md)  { @include copy-default; }
+			@include breakpoint($lg)  { @include copy-default; }
+			@include breakpoint($xlg) { @include copy-overlay; }
+			}
+		}
+}
+
+
+
+
+
+
+
+
+

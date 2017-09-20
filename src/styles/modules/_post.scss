@@ -1,0 +1,177 @@
+.post {
+
+	&__header { 
+		position:relative;
+		&:before {
+			position:absolute;
+			content: " ";
+			width:9999px; height:100%;
+			left:-1000px; top:-1px;
+			background:$color-background--soft;
+			z-index:-2;
+		}
+	}
+
+	&__meta {
+		position:relative;
+		background-color: $white;
+		font-size:12px;
+		//font-weight: $font-weight--thin;
+		color: $color-copy--xsoft;
+		text-transform: uppercase;
+	}
+
+	&__date, &__category {
+		color: $color-copy--xsoft;
+		display:inline-block;
+		margin-bottom:10px;
+	}
+
+	&__title {
+		text-transform: none;
+		margin:0;
+		font-size:26px;
+		font-weight: $font-weight--medium;
+		line-height:1.25;
+		@include breakpoint($sm) { font-size:30px; }
+	}
+	
+
+	//primarily for events page
+	&__desc {
+		color: $color-copy--dark;
+		text-transform: none;
+		font-size:12px;
+		line-height:1.7;
+		b { color: $color-copy--mild }
+	}
+
+	&__share {
+		font-size:10px;
+		margin-bottom:20px;
+		> span {
+			display:block;
+			margin-bottom:2px;
+		}
+
+		@include breakpoint($ms) {
+			margin-bottom:0;
+		}
+		
+	}
+
+	&__body {
+		position:relative;
+		background: $white;
+	}
+
+	&__copy {
+		@include clearfix;
+		@include breakpoint($lg) {
+			margin-right:30px;
+		}
+	}
+
+	&__extra {
+		@include clearfix;
+		padding:0 20px;
+		background-color:$color-background--soft;
+		width:100%;
+		word-wrap: break-word;
+		will-change:transform;
+		
+		&.is-fixed {
+			top:0;
+			position:fixed;
+		}
+
+		@include breakpoint($lg) {
+			max-width:238px;
+		}
+
+	}
+
+	&__thumb {
+		position:relative;
+
+		img { 
+			width:100%; 
+			height:auto;
+		}
+
+		&--guide {
+			background-color:#DEDEDE;
+			text-align:center;
+			height:100%;
+			img {
+				width: auto; 
+				display:inline;
+				margin:25px 0 20px;
+			}
+		}
+	}
+	
+	//thumbnails of context
+	&__thumbs {
+		img {
+			display:inline-block;
+			border:1px solid $color-border;
+			padding:3px;
+			margin-right:5px;
+		}
+	}
+
+	&__sponsor {
+		background-color:$white;
+		text-align:center;
+		padding:10px 0;
+		border-radius:2px;
+	}
+
+	&__sponsor-head {
+		font-size:14px;
+		font-weight: $font-weight--thin;
+		text-align: center;
+		display:block;
+		margin-bottom:5px;
+	}
+
+	&__sponsor-logo {
+		display:inline-block;
+		width:150px;
+	}
+
+	&__footer {
+		
+	}
+
+	&__related {
+	
+		> a {
+			display:block;
+			margin-bottom:10px;
+			font-size:14px;
+		}
+	}
+}
+
+.tags {
+
+	&__tag {
+		display:inline-block;
+		margin-bottom:7px; margin-right:2px;
+		background-color: $color-primary;
+		border-radius:35px;
+		padding:3px 15px;
+		font-size: 14px;
+		text-transform: lowercase;
+		color: $white;
+		
+		a {
+			color: $white;
+		}
+	}
+
+}
+
+

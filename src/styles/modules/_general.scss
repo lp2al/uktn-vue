@@ -1,0 +1,42 @@
+.viewmore {
+	text-align:center;
+	a { text-transform:uppercase; }
+}
+
+.swidget {
+	margin-bottom:20px;
+}
+
+.subscribe {
+	& > a, & > img { display:inline-block;}
+}
+
+/* covers pagination for event manager plugin */
+.pagination, .em-pagination {
+	display:block;
+	color: $color-copy--mild;
+	padding:0;
+	text-align:center;
+
+	&__item, & .page-numbers {
+		margin-left:5px;
+		padding:5px 10px;
+		border-radius:50%;
+		border:1px solid $color-border--mild;
+		transition:background 0.2s ease-in 0s;
+
+		&.is-active, &.current {
+			color: $color-copy--mild;
+			background: $color-background--mild;
+		}
+
+		&:hover {
+			background-color: $color-background--mild;
+		}	
+	}
+}
+
+.em-pagination {
+	margin-top:20px;
+}
+

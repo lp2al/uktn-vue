@@ -1,0 +1,92 @@
+
+.logo { fill: $color-primary; }
+
+
+.header {
+	position:relative;
+	@include clearfix;
+	background-color: $white;
+	padding-bottom:30px;
+	
+	&:before {
+
+		position:absolute;
+		bottom:5px;
+		left:0;
+		content: "Formerly Tech City News";
+		text-align:center;
+		width:100%;
+		font-size:12px;
+		font-style:italic;
+		color:#bbb;
+	}
+
+	@include breakpoint($sm) {
+		&:before { display:none; }
+	}
+
+
+	&__brand {
+
+		@include clearfix;
+		line-height:1;
+		text-align:center;
+		padding:25px 0 20px 0;
+		background: $white;
+		display:none;
+
+		@include breakpoint($sm) {
+			display:block;
+		}
+		
+		& .brand-lrg {
+			display:inline-block;
+		}
+	}
+
+	&__ad {
+		display:none;
+		float:right;
+	}
+
+	&__sticky {
+
+		z-index:9999;
+		background-color: $white;
+		margin:0 auto;	
+
+		&.is-fixed {
+
+			position:fixed;
+			width:100%;
+			top:-300px;
+			transition:all .4s linear 0s;
+			text-align:left;
+			will-change:transform;
+
+			@include breakpoint($md) {
+				border-bottom:1px solid $color-border--mild;
+			}
+			
+			& .header__brand {
+				@include breakpoint($md) { float:left; }
+			}
+
+			& .header__ad {
+				@include breakpoint($md) {
+					padding:10px 0;
+					display:block;
+				}
+			}
+
+			& .nav__main { border-bottom:0; }
+		}
+
+		&.is-visible {
+			top:0;
+		}
+	}
+}
+
+
+

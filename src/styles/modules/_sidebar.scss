@@ -1,0 +1,25 @@
+.sidebar {
+
+	// &.is-fixed {
+	// 	transition: all 0s linear 0s;
+	// 	opacity:1;
+	// 	position:fixed;
+	// 	top:60px;
+	// 	background: $white;
+	// 	z-index: 1;
+	// }
+	border-right:none;
+
+	&__sticky {
+		
+		&.is-fixed {
+			transition: all 0s linear 0s;
+			opacity:1;
+			position:fixed;
+			background: $white;
+			z-index: 1;	
+			will-change: transform;
+		}
+
+	}
+}

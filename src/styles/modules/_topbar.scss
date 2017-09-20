@@ -1,0 +1,101 @@
+.topbar {
+	@include clearfix;	
+	position:relative;
+	background-color:$color-background--soft;
+	height:50px;
+
+	&__main { height:100%; }
+
+	&__logo {
+		float:left;
+		width:32px; height:32px;
+		margin-left:15px;
+		@include vertical-align;
+		@include breakpoint($sm) {
+			display:none;
+		}
+	}
+
+	&__menu {
+		@include clearfix;
+		position:absolute;
+		width:100%; 
+		background-color: $color-background--soft;
+		top:50px; left:0;
+		overflow:hidden;
+		z-index:3;
+		max-height:0;
+	
+		
+		@include breakpoint($sm) {
+			@include vertical-align;
+			float:left; 
+			width:auto;
+			max-height:600px; //height:auto doesn't animate.
+			padding:0;
+			margin-left:15px;
+		}
+		@include breakpoint($md) {
+			margin-left:0;
+		}
+		
+		//menu items
+		& > a, span {
+			display:block;
+			padding:10px 10px 10px 20px;
+			border-bottom:1px solid $color-border--mild;
+			font-size:14px;
+			letter-spacing:0.5px;
+			color:$color-copy--xsoft;
+			font-weight: $font-weight--medium;
+
+			&:first-child { border-top:1px solid $color-border--mild }
+
+			@include breakpoint($sm) {
+				display:inline-block;
+				padding-left:0;
+				border:none;
+				font-size:12px;
+				&:first-child { border:none}
+			}
+		}
+
+		//states 
+		&.is-expanded {
+			transition: all 0.2s ease-in-out 0s;
+			max-height:600px; //for animation
+		} 
+
+	}
+
+	&__menu-toggle {
+		float:right;
+		margin-right:15px;
+		@include breakpoint($sm) {
+			display:none;
+		}
+	}
+
+	&__social { 
+		font-size:12px;
+		color:$color-copy--xsoft;
+		display:none;
+		@include breakpoint($sm) {
+			display:block;
+			@include vertical-align;
+			float:right; 
+		}
+	}
+}
+
+
+// &__slogan {
+	// 	display:none;
+	// 	margin-left:20px;
+	// 	@include breakpoint($ms) {
+	// 		@include vertical-align;
+	// 		display:block;
+	// 		float:left;
+	//  }
+	// 	@include breakpoint($sm) { margin-left:0 }
+	// }

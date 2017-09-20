@@ -1,0 +1,28 @@
+.l-site-cta {
+	background: url(../images/site-cta-bg.png);
+	background-repeat: repeat;
+	padding:25px 0;
+	
+}
+
+.l-site-cta__copy {
+	position: relative;
+	display: inline-block;
+}
+
+.l-site-cta__icon {
+	display: inline-block;
+	margin-bottom:10px;
+	@include breakpoint($medium) {
+		position:absolute;
+		left:-100px;
+	}
+}
+
+.l-site-cta__title {
+	font-size: 18px;
+	font-weight:500;
+	background:#fff;
+	padding:10px;
+	margin:0;
+}

@@ -1,0 +1,53 @@
+.text {
+
+	//size 
+	&--medium { @include font(1.6rem); }
+
+	//color
+	&--white { color:$white; }
+	&--black { color:#555; }
+
+	//alignmment
+	&--valign { @include vertical-align; }
+
+	//case
+	&--uppercase  { text-transform: uppercase; }
+	&--capitalize { text-transform: capitalize; }
+
+}
+
+	.text__link {
+
+		color: $blue;
+		&:hover { color:$navy; }
+		
+	}
+
+	.text__block {
+		padding:8px 10px;
+		display:inline-block;
+
+		&--orange { background: $orange; color: $white; }
+	}
+
+
+.page-title {
+
+	@include font(2.4rem);
+	margin-bottom:20px;
+
+	&--large { @include font(3rem); }
+
+	&--navy { color: $navy; }
+}
+
+.page-subtitle {
+
+	@include font(2rem);
+	margin-bottom:20px;
+
+	&--navy {
+		color: $navy;
+	}
+
+}

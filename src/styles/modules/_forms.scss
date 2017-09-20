@@ -1,0 +1,144 @@
+// input[type="text"], 
+// input[type="email"], 
+// input[type="password"],
+// input[type="url"],
+// input[type="tel"],
+input, textarea, select {
+	padding:10px;
+	width: 100%;
+	border:1px solid $color-border;
+}
+
+input[type="checkbox"], input[type="radio"]  {
+	width:auto;
+}
+
+fieldset {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+.form {
+	
+	&__field {
+
+		position:relative;
+		margin-bottom:10px;
+
+		& > label { 
+			display:none;
+			@include breakpoint($sm) {
+				display:block;
+			}
+		}
+
+		& > input, textarea, select { 
+			background: $color-background--mild;
+			border:0;
+		}
+
+
+		//specifically for guides form. //needs to be standardised
+
+		&__required {
+			@include vertical-align;
+			position:absolute;
+			right:0;
+			color: $pomegranate;
+		}
+
+		&--white {
+
+			& > input, textarea, select { 
+				background: $white;
+			}
+
+			::-webkit-input-placeholder { color: $color-copy--soft !important;  }
+			:-moz-placeholder { color: $color-copy--soft !important;  } 
+			::-moz-placeholder { color: $color-copy--soft !important;  } 
+			:-ms-input-placeholder { color: $color-copy--soft !important;  }
+		
+		}
+
+	}
+
+	&__label {
+		
+		&--bold {
+			line-height:1.5;
+			font-size:12px;
+			font-weight:$font-weight--ultra-bold;
+		}
+	}
+
+	&__checkbox-group {
+		& .frm_checkbox {
+			display:inline-block;
+			width:49%;
+			font-size:12px;
+			@include breakpoint($ms) { width:32%; }
+			@include breakpoint($sm) { width:24%; }
+		}
+	}
+
+	&__checkbox {
+		font-size:12px;
+	}
+
+	& .is-hidden {
+		display:none;
+	}
+
+	&__helpers {
+		display:block;
+		padding-top:5px;
+		font-size:16px;
+		font-style:italic;
+		font-weight: $font-weight--thin;
+	}
+
+	&__submit {
+		border:0; 
+		width: auto;
+	}
+
+	//placeholders
+	@include breakpoint($sm) {
+		::-webkit-input-placeholder { color: $color-background--mild;  }
+		:-moz-placeholder { color:$color-background--mild; } 
+		::-moz-placeholder { color:$color-background--mild; } 
+		:-ms-input-placeholder { color:$color-background--mild }
+	}
+}
+
+// .form-search {
+	
+// 	& > input {
+// 		padding:10px;
+// 		border:1px solid #ddd;
+// 	}
+
+// 	& > button {
+// 		margin-left:-5px;
+// 		padding:9px 15px 8px;
+// 		outline:none;
+// 	}
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
